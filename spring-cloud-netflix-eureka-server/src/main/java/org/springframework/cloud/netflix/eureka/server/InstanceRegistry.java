@@ -119,7 +119,7 @@ public class InstanceRegistry extends PeerAwareInstanceRegistryImpl implements A
 	}
 
 	private void handleRegistration(InstanceInfo info, int leaseDuration, boolean isReplication) {
-		log("register " + info.getAppName() + ", vip " + info.getVIPAddress() + ", leaseDuration " + leaseDuration
+		log("clayton eureka `register " + info.getAppName() + ", vip " + info.getVIPAddress() + ", leaseDuration " + leaseDuration
 				+ ", isReplication " + isReplication);
 		publishEvent(new EurekaInstanceRegisteredEvent(this, info, leaseDuration, isReplication));
 	}
