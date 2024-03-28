@@ -2,5 +2,7 @@
 
 ## Dockerfile
 
-Docker file is published to https://hub.docker.com/r/hammer2j2/myspringproj3
+Current image tag version is v0.0.1
+
+`docker pull hammer2j2/spring-cloud-netflix:v0.0.1`
 
