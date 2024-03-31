@@ -1,0 +1,57 @@
+server:
+  port: 8081
+
+eureka:
+  instance: 
+    hostname: localhost
+  client:
+    username: admin
+    password: pwd
+    appname: eureka-caching-server
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://admin:pwd@${eureka.instance.hostname}:${server.port}/eureka/
+    security:
+      user:
+        name: admin
+        password: pwd
+
+health: 
+  config: 
+    enabled: false 
+spring:
+  application:
+    name: whatupfoobar
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true
+      overrideSystemProperties: false
+
+  security:
+    user:
+      name: admin
+      password: pwd
+  config:
+    # fail-fast: true
+    import: optional:configserver:http://localhost:8888/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org:
+      springframework:
+        security: WARN
+        cloud:
+          netflix:
+            eureka: DEBUG
+
+# eureka replicates on /eureka/v2/peerreplication/batch 
+
+# have to disable CSRF https://stackoverflow.com/questions/55303851/why-i-recieve-invalid-csrf-token
