@@ -130,7 +130,9 @@
 			<dependency>
 				<groupId>com.netflix.eureka</groupId>
 				<artifactId>eureka-core-jersey3</artifactId>
-				<version>${eureka.version}</version>
+				<version>0.0.1-SNAPSHOT</version>
+				<!-- <version>${eureka.version}</version> -->
+
 			</dependency>
 			<dependency>
 				<groupId>com.netflix.eureka</groupId>
