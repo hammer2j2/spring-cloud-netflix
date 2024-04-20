@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  deploy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./spring-cloud-netflix-dependencies:/app/spring-cloud-netflix-dependencies
+      - ./spring-cloud-netflix-eureka-client:/app/spring-cloud-netflix-eureka-client
+      - ./spring-cloud-netflix-eureka-server:/app/spring-cloud-netflix-eureka-server
+      - ./spring-cloud-starter-netflix-eureka-server:/app/spring-cloud-starter-netflix-eureka-server
+      - ./spring-cloud-starter-netflix-eureka-client:/app/spring-cloud-starter-netflix-eureka-client
+      - ~/.m2:/root/.m2
