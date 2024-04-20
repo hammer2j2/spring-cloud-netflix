@@ -24,7 +24,6 @@ _site/
 *.swo
 /spring-cloud-release-tools*.jar
 antrun
-.vscode/
 .flattened-pom.xml
 node
 node_modules
