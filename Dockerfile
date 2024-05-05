@@ -20,4 +20,5 @@ RUN chmod +x mvnw
 RUN sed -i 's/\r$//' mvnw
 
 # Run Maven build command
-CMD ["./mvnw", "clean", "install", "-B", "-Pdocs", "-DskipTests", "-fae"]
+# CMD ["./mvnw", "clean", "install", "-B", "-Pdocs", "-DskipTests", "-fae"]
+CMD ["./mvnw", "install", "-B",  "-DskipTests", "-fae"]

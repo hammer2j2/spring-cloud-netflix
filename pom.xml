@@ -150,12 +150,22 @@
 		<module>spring-cloud-starter-netflix-eureka-client</module>
 		<module>spring-cloud-starter-netflix-eureka-server</module>
 		<module>spring-cloud-netflix-eureka-client-tls-tests</module>
-		<module>docs</module>
     </modules>
 	<profiles>
 		<profile>
 			<id>spring</id>
 			<repositories>
+				<repository>
+					<id>spring-snapshots-local</id>
+					<name>Spring Snapshots Local</name>
+					<url>file://${user.home}/.m2/repository</url>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+				</repository>
 				<repository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
